@@ -8,4 +8,6 @@ int main(){
     int number = 10;
     int sum = count_evens(number);
     printf("%d\n", sum);
+
+    return 0;
 }
