@@ -17,21 +17,6 @@ bool is_ascending(int array[], int n){
     return ascending;
 }
 
-int max_element_index(int array[], int n){
-    if (n >= 1){
-        int max = array[0];
-        for (int i = 1; i < n; i++){
-            if (array[i] > max){
-                max = i;
-            }
-        }
-        return max;
-    }
-    else{
-        return -10;
-    }
-}
-
 int median_array(int array[], int n){
     if (n%2 == 0 || n < 1){
         return 0;
