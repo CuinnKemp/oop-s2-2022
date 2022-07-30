@@ -17,6 +17,11 @@ int transform(int number){
         binaryNumber = binaryNumber + ((numberHold % 2) * (pow(10, i)));
         numberHold = numberHold/2;
     }
+
+    if (isNegative == 1){
+        binaryNumber = binaryNumber * -1;
+    }
+
     return binaryNumber;
 }
 
