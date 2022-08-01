@@ -6,5 +6,5 @@ void print_scaled(int array[3][3],int scale){
             array[i][j] = array[i][j] * scale;
         }
     }
-    printf("%d %d %d\n%d %d %d\n%d %d %d",array[0][0], array[0][1], array[0][2], array[1][0], array[1][1], array[1][2], array[2][0], array[2][1], array[2][2]);
+    printf("%d %d %d\n%d %d %d\n%d %d %d\n",array[0][0], array[0][1], array[0][2], array[1][0], array[1][1], array[1][2], array[2][0], array[2][1], array[2][2]);
 }
