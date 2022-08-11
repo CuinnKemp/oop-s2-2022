@@ -1,24 +1,20 @@
-#include <stdio.h>
+#include <iostream>
+#include <string>
 
-extern int is_identity(int[10][10]);
+using namespace std;
+
+extern void print_class(std::string [4], std::string [], int [][4], int);
 
 int main(){
-    int array[10][10] = { 0 };
-    for (int i = 0; i < 10; i++){
-        array[i][i] = 1;
+    string courses[4];
+    string students[4]; int nstudents = 4;
+    int report_card[nstudents][4];
+    courses[0] = "Maths"; courses[1] = "Science"; courses[2] = "PE"; courses[3] = "History";
+    students[0] = "Bill"; students[1] = "Bob"; students[2] = "Barry"; students[3] = "Billy";
+    for (int i = 0; i < nstudents; i++){
+        for (int j = 0; j < 4; j++){
+            report_card[i][j] = i * j + j;
+        }
     }
-
-
-    ////display array
-    // for (int i = 0; i < 10; i++){
-    //     for (int j = 0; j < 10; j++){
-    //         printf("%d ", array[i][j]);
-    //     } 
-    //     printf("\n");
-    // }
-
-    
-    int sum = is_identity(array);
-
-    printf("%d\n", sum);
+    print_class(courses, students, report_card, nstudents);
 }

@@ -1,19 +1,26 @@
-#include <stdio.h>
-int is_identity(int array[10][10]){
-    int identity = 1;
-    for (int i = 0; i < 10; i++){
-        for (int j = 0; j < 10; j++){
-            if (i == j && array[i][j] != 1){
-                identity = 0;
-                return identity; 
-            }
-            else{
-                if (i != j && array[i][j] != 0){
-                    identity = 0;
-                    return identity;
-                } 
-            }
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void print_class(std::string courses[4], std::string students[], int report_card[][4], int nstudents){
+    cout << "Report Card" << " ";
+    for (int j = 0; j < 4; j++){
+        cout << courses[j];
+        if (j != 3){
+            cout << " ";
         }
     }
-    return identity;
+    cout << endl;
+    for (int i = 0; i < nstudents; i++){
+        cout << students[i] << " ";
+        for (int j = 0; j < 4; j++){
+            cout << report_card[i][j];
+            if (j != 3){
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+
 }
