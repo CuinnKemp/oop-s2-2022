@@ -12,6 +12,6 @@ int main(){
     float right = 2.01;
     cout << add_op(left, right) << endl;
     cout << subtract_op(left,right) << endl;
-    cout << arithmetic_ops(left, right, "add") << endl;
-    cout << arithmetic_ops(left, right, "subtract") << endl;
+    cout << arithmetic_ops(left, right, "+") << endl;
+    cout << arithmetic_ops(left, right, "-") << endl;
 }
