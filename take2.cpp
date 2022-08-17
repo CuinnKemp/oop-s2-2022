@@ -78,8 +78,8 @@ class Screen{
         }
 
         void showScreen(){
-            for (int i = 0; i < dimensions[0]; i++){
-                for (int j = 0; j < dimensions[1]; j++){
+            for (int i = dimensions[0] - 1; i > -1; i--){
+                for (int j = dimensions[1] - 1; j > -1; j--){
                     if (array[i * (dimensions[1]) + j] == 1){
                         cout << "█";
                     }
@@ -135,8 +135,8 @@ int main(){
     // create a Screen object
     Plane Plane1;
     Screen Screen1;
-    for (float i = 0; i < 12; i = i + 0.5){
-        double corner[8][3] = {{0, 0, 0},{10, 0, 0},{10, 10, 0},{0, 10, 0},{0, 0, 10},{10, 0, 10},{10, 10, 10},{0, 10, 10}};
+    for (float i = 0; i < 7; i = i + 0.5){
+        double corner[8][3] = {{0, 0, 0},{20, 0, 0},{20, 10, 0},{0, 20, 0},{0, 0, 20},{20, 0, 20},{20, 10, 20},{0, 20, 20}};
         Plane1.set_angle(i);
         for (int j = 0; j < 8; j++){
             double* pointOnPlane = Plane1.findPointOnPlane(corner[j]);
