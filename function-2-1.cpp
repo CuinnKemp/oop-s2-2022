@@ -7,7 +7,7 @@ string month_lookup(int month){
         return "invalid month";
     }
 
-    string months[12] = {"Janurary", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    string months[12] = {"January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
     return months[month-1];
 }
