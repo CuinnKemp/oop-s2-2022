@@ -1,7 +1,10 @@
+#include <stdio.h>
 
-extern void printer(int[10][10]);
+extern int sum_diagonal(int[4][4]);
 
 int main(){
-    int numbers[10][10] = {0}; numbers[0][9] = 1;
-    printer(numbers);
+    int array[4][4] = {{1,1,1,1},{1,2,1,1},{1,1,2,1},{1,1,1,1}};
+    int sum = sum_diagonal(array);
+
+    printf("%d\n", sum);
 }
