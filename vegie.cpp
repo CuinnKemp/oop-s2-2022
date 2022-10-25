@@ -5,7 +5,7 @@ int vegie::nextID = 100;
 vegie::vegie(string n, int v){
     this->name = n;
     this->volume = v;
-    this->favourite_food = "";
+    this->favourite_food = "grass";
     this->animalID = this->nextID;
     this->nextID++;
 }
