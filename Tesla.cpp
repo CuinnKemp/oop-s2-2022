@@ -28,6 +28,8 @@ void Tesla::chargeBattery(int mins){
             this->batteryPercentage += 0.5;
         }
     }
+    int hold = this->batteryPercentage * 10;
+    this->batteryPercentage = hold/10.0;
 }
 
 void Tesla::drive(int kms){
@@ -37,6 +39,8 @@ void Tesla::drive(int kms){
             batteryPercentage = batteryPercentage - 0.2;
         }
     }
+    int hold = this->batteryPercentage * 10;
+    this->batteryPercentage = hold/10.0;
 }
 
 void Tesla::set_model(char _m){

@@ -34,6 +34,8 @@ void Ford::drive(int kms){
             this->litresOfFuel = this->litresOfFuel - 0.2;
         }
     }
+    int hold = this->litresOfFuel * 10;
+    this->litresOfFuel = hold/10.0;
 }  
 
 void Ford::set_badgeNumber(int _b){
