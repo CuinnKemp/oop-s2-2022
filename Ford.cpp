@@ -47,5 +47,11 @@ void Ford::set_litresOfFuel(float _l){
     this->litresOfFuel = _l;
 }
 float Ford::get_litresOfFuel(){
+    if (this->litresOfFuel > 60){
+        return 60;
+    }
+    if (this->litresOfFuel < 0){
+        return 0;
+    }
     return this->litresOfFuel;
 }
