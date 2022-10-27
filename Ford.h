@@ -5,7 +5,7 @@
 class Ford:public Car{
     private:
         int badgeNumber;
-        float litresOfFuel;     // Initially 60L
+        double litresOfFuel;     // Initially 60L
         static int nextVinNumber;
     
     public: 

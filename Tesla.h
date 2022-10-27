@@ -5,7 +5,7 @@
 class Tesla:public Car{
     private:
         char model;
-        float batteryPercentage;     // Initially 100%
+        double batteryPercentage;     // Initially 100%
         static int nextVinNumber;
     
     public: 
