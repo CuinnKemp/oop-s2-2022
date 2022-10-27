@@ -28,7 +28,7 @@ void Ford::refuel(int litres){
 }
 
 void Ford::drive(int kms){
-    for (int i = 1; i <= kms; i++){
+    for (int i = 1; i < kms; i++){
         if (this->litresOfFuel > 0){
             this->emissions = this->emissions + 234;
             this->litresOfFuel = this->litresOfFuel - 0.2;
