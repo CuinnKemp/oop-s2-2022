@@ -31,7 +31,7 @@ void Ford::drive(int kms){
     for (int i = 1; i <= kms; i++){
         if (this->litresOfFuel > 0){
             this->emissions = this->emissions + 234;
-            this->litresOfFuel = this->litresOfFuel - 1.0/5.0;
+            this->litresOfFuel = this->litresOfFuel - 0.2;
         }
     }
 }  
