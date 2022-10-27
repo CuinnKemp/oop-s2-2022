@@ -24,24 +24,25 @@ Tesla::Tesla(char model, int price){
 }  
 
 void Tesla::chargeBattery(int mins){
+    double hold = batteryPercentage;
     for (int i = 1; i <= mins; i++){
         if (batteryPercentage < 100){
-            this->batteryPercentage += 0.5;
+            hold += 0.5;
         }
-        float hold = this->batteryPercentage * 10;
-        this->batteryPercentage = hold/10.0;
     }
+    this->batteryPercentage = hold;
 }
 
 void Tesla::drive(int kms){
-    for (int i = 1; i < kms; i++){
+    double hold = batteryPercentage;
+    for (int i = 1; i <= kms; i++){
         if (this->batteryPercentage > 0){
             this->emissions = this->emissions + 74;
-            batteryPercentage = batteryPercentage - 0.2;
+             hold = hold - 0.2;
         }
-        int hold = this->batteryPercentage * 10;
-        this->batteryPercentage = hold/10.0;
     }
+    this->batteryPercentage = hold;
+
 }
 
 void Tesla::set_model(char _m){
