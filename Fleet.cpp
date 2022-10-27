@@ -4,10 +4,10 @@ Fleet::Fleet(){
     count = 5;
     this->fleet = new Car*[5];
     for (int i = 0; i < 3; i++){
-        fleet[i] = new Tesla;
+        fleet[i] = new Tesla('s', 100000);
     }
     for (int i = 3; i < 5; i++){
-        fleet[i] = new Ford;
+        fleet[i] = new Ford(5,50000);
     }
 
 }                  
