@@ -1,5 +1,4 @@
 #include "Tesla.h"
-#include <cmath>
 
 int Tesla::nextVinNumber = 1000001;
 
@@ -24,25 +23,20 @@ Tesla::Tesla(char model, int price){
 }  
 
 void Tesla::chargeBattery(int mins){
-    double hold = batteryPercentage;
     for (int i = 1; i <= mins; i++){
-        if (hold < 100){
-            hold += 0.5;
+        if (batteryPercentage < 100){
+            this->batteryPercentage += 0.5;
         }
     }
-    this->batteryPercentage = hold;
 }
 
 void Tesla::drive(int kms){
-    double hold = batteryPercentage;
     for (int i = 1; i <= kms; i++){
-        if (hold > 0){
+        if (this->batteryPercentage > 0){
             this->emissions = this->emissions + 74;
-             hold = hold - 0.2;
+            batteryPercentage = batteryPercentage - 0.2;
         }
     }
-    this->batteryPercentage = hold;
-
 }
 
 void Tesla::set_model(char _m){
