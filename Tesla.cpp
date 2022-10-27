@@ -27,9 +27,9 @@ void Tesla::chargeBattery(int mins){
         if (batteryPercentage < 100){
             this->batteryPercentage += 0.5;
         }
+        int hold = this->batteryPercentage * 10;
+        this->batteryPercentage = hold/10.0;
     }
-    int hold = this->batteryPercentage * 10;
-    this->batteryPercentage = hold/10.0;
 }
 
 void Tesla::drive(int kms){
