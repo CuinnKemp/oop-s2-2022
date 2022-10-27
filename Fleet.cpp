@@ -17,7 +17,7 @@ Fleet* Fleet::createFleet(int authority){
         Fleet* f1 = new Fleet;
         return f1;
     }
-    return 0;
+    return nullptr;
 }
 
 void Fleet::addCar(Car *car){
