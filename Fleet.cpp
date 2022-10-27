@@ -4,10 +4,10 @@ Fleet::Fleet(){
     count = 5;
     this->fleet = new Car*[5];
     for (int i = 0; i < 3; i++){
-        fleet[i] = new Tesla('s', 100000);
+        fleet[i] = new Tesla;
     }
     for (int i = 3; i < 5; i++){
-        fleet[i] = new Ford(5,50000);
+        fleet[i] = new Ford;
     }
 
 }                  
@@ -27,7 +27,7 @@ void Fleet::addCar(Car *car){
         fleet[i] = hold[i];
     }
     fleet[count] = car;
-    count++;
+    this->count++;
 }  // Adds a car to the fleet
 
 Car** Fleet::get_fleet(){
